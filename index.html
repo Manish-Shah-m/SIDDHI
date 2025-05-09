@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="navbar-content">
+          <div class="logo">Logo</div>
+          <div class="nav-text">I love you forever</div>
+          <svg class="heart-icon" id="heartIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </div>
+      </nav>
+      
+      <!-- Love message popup that appears when heart is clicked -->
+      <div class="love-message" id="loveMessage">
+        <span style="display: inline-block;">I LOVE YOU SIDDHI</span>
+      </div>
+
+
+
+    <section class="music-section">
+        <div class="content-wrapper">
+            <div class="text-content">               
+                <h1 class="main-title">
+                    EVERY MOMENT WITH YOU IS A <span class="pink-text">TREASURE</span> I WANT TO <span class="red-text">KEEP</span> FOREVER, <span class="forever">FOREVER AND EVER</span>
+                </h1>
+            </div>
+            <div class="player-container">
+                <div class="play-btn" id="playButton">
+                    <div class="play-icon" id="playIcon"></div>
+                    <div class="pause-icon" id="pauseIcon"></div>
+                </div>
+                <div class="play-text">play our song</div>
+            </div>
+        </div>
+        <!-- Using a placeholder audio file -->
+        <audio id="audioPlayer" loop>
+            <source src="https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_click.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+
+
+
+
+
+    <section class="poem-gallery-section">
+        <!-- <h2 class="title">Poetic Collections</h2> -->
+        
+        <div class="poem-categories">
+            <!-- Nature Poetry Category -->
+            <div class="poem-category" data-category="nature">
+                <div class="poem-category-bg" style="background-image: url('/api/placeholder/800/600');"></div>
+                <div class="poem-category-overlay">
+                    <h3 class="poem-category-title">Nature's Whispers</h3>
+                </div>
+            </div>
+            
+            <!-- Love Poetry Category -->
+            <div class="poem-category" data-category="love">
+                <div class="poem-category-bg" style="background-image: url('/api/placeholder/800/600');"></div>
+                <div class="poem-category-overlay">
+                    <h3 class="poem-category-title">Sonnets of Love</h3>
+                </div>
+            </div>
+            
+            <!-- Urban Poetry Category -->
+            <div class="poem-category" data-category="urban">
+                <div class="poem-category-bg" style="background-image: url('/api/placeholder/800/600');"></div>
+                <div class="poem-category-overlay">
+                    <h3 class="poem-category-title">Urban Rhythms</h3>
+                </div>
+            </div>
+            
+            <!-- Spiritual Poetry Category -->
+            <div class="poem-category" data-category="spiritual">
+                <div class="poem-category-bg" style="background-image: url('/api/placeholder/800/600');"></div>
+                <div class="poem-category-overlay">
+                    <h3 class="poem-category-title">Spiritual Verses</h3>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nature Carousel Container -->
+        <div id="nature-carousel" class="carousel-container">
+            <div class="close-carousel">&times;</div>
+            <div class="carousel-wrapper">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="" alt="Nature poem image 1">
+                        <div class="image-caption">Autumn Leaves Dancing</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Nature poem image 2">
+                        <div class="image-caption">Mountain Serenity</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Nature poem image 3">
+                        <div class="image-caption">Ocean's Whisper</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Nature poem image 4">
+                        <div class="image-caption">Forest Sanctuary</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Love Carousel Container -->
+        <div id="love-carousel" class="carousel-container">
+            <div class="close-carousel">&times;</div>
+            <div class="carousel-wrapper">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Love poem image 1">
+                        <div class="image-caption">First Glance</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Love poem image 2">
+                        <div class="image-caption">Eternal Bond</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Love poem image 3">
+                        <div class="image-caption">Heart's Desire</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Love poem image 4">
+                        <div class="image-caption">Soulful Connection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Urban Carousel Container -->
+        <div id="urban-carousel" class="carousel-container">
+            <div class="close-carousel">&times;</div>
+            <div class="carousel-wrapper">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Urban poem image 1">
+                        <div class="image-caption">City Lights</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Urban poem image 2">
+                        <div class="image-caption">Concrete Dreams</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Urban poem image 3">
+                        <div class="image-caption">Midnight Streets</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Urban poem image 4">
+                        <div class="image-caption">Urban Symphony</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Spiritual Carousel Container -->
+        <div id="spiritual-carousel" class="carousel-container">
+            <div class="close-carousel">&times;</div>
+            <div class="carousel-wrapper">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Spiritual poem image 1">
+                        <div class="image-caption">Inner Peace</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Spiritual poem image 2">
+                        <div class="image-caption">Divine Light</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Spiritual poem image 3">
+                        <div class="image-caption">Eternal Journey</div>
+                    </div>
+                    <div class="item">
+                        <img src="/api/placeholder/800/600" alt="Spiritual poem image 4">
+                        <div class="image-caption">Sacred Wisdom</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="container2">
+            <h1>Verses & Rhythms</h1>
+            <p>Let me write you a love letter, tell me how can I love better.</p>
+            <div class="poems-container">
+                <!-- Initial poems -->
+                
+                <div class="poem-item">
+                    <div class="poem-number">(01)</div>
+                    <div class="poem-title">The Love You Wish To Feel</div>
+                    <div class="poem-description">Tell me Siddhi how shall I love you in your terms.</div>
+                    <div class="poem-wordcount">156 words</div>
+                </div>
+                <div class="poem-item">
+                    <div class="poem-number">(02)</div>
+                    <div class="poem-title">If You Only Knew</div>
+                    <div class="poem-description">Don't ask how much I Love You !</div>
+                    <div class="poem-wordcount">143 words</div>
+                </div>
+                
+                <!-- Additional poems that will be toggled -->
+                <div class="more-poems" style="display: none;">
+                    <div class="poem-item">
+                        <div class="poem-number">(03)</div>
+                        <div class="poem-title">Before The Sky Falls</div>
+                        <div class="poem-description">Even if it is last night before the world ends, I still love you.</div>
+                        <div class="poem-wordcount">118 words</div>
+                    </div>
+                    <div class="poem-item">
+                        <div class="poem-number">(04)</div>
+                        <div class="poem-title">Tomorrow With You</div>
+                        <div class="poem-description">The symphony of dreams, how I imagine us.</div>
+                        <div class="poem-wordcount">167 words</div>
+                    </div>
+                    <div class="poem-item">
+                        <div class="poem-number">(06)</div>
+                        <div class="poem-title">In This One Life</div>
+                        <div class="poem-description">Siddhi- even if I had hundreds of Life's , I would always choose this one for YOOU !</div>
+                        <div class="poem-wordcount">132 words</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Button now positioned after all poems -->
+            <div class="button-container">
+                <button id="view-all-button">View More Poems</button>
+            </div>
+        </div>
+        
+        <!-- Poem details overlay -->
+        <div id="poem-details" class="poem-overlay">
+            <div class="poem-details-content">
+                <div class="close-button">&times;</div>
+                <h2 id="detail-title">Poem Title</h2>
+                <div id="detail-poem" class="poem-text">
+                    <!-- Poem text will be inserted here -->
+                </div>
+                <div id="detail-wordcount" class="detail-meta">Word count: 0</div>
+            </div>
+        </div>
+
+
+
+
+        <div class="containerheart">
+            <div class="preloader">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="shadow"></div>
+          </div>
+          
+
+
+
+
+
+          
+        
+        <div class="container hero-container2">
+          <div class="hero-text2">
+            <h1>Poetry & Echoes of the Heart</h1>
+            <div class="location">(Whispers of Love)</div>
+          </div>
+          
+          <div class="hero-image2">
+            <img src="/api/placeholder/1000/500" alt="Two silhouettes against sunset" />
+          </div>
+          
+          <div class="hero-description2">
+            Siddhi, you’ve become more than just a muse—you are the very soul of my creation.
+             My brushes move to the rhythm of your name, my verses breathe your silence, and every melody hums the warmth of your smile. 
+             You are my art, my poetry, my magic—each canvas, every stanza, all my poems now sing only of you. In your presence,
+              I no longer create about pain—I create because of you, I write for you.         
+             </div>
+          
+          <div class="scroll-prompt">
+            <span class="arrow-down">↓</span>
+            <span>Scroll Down</span>
+          </div>
+        </div>
+        
+        <div class="container">
+          <div class="section-header">
+            <span class="icon">♥</span>
+            <span>(What You'll Find)</span>
+          </div>
+          
+          <div class="services">
+            <div class="service">
+              <h3 class="service-title">Soak My Soul Into Yours.</h3>
+              <p class="service-description">
+                <span class="quote">"Ho.. Apne hi rang mein mujhko rang de
+                    Dheeme dheeme rang mein mujhko rang de
+                    Saundhe-saundhe rang mein mujhko rang de
+                    Rang de na, rang de na, rang de na..
+                    "</span>
+                    Transform me, Siddhi, into your essence —
+                    Let your shades flow through me,
+                    Color me in the hues of you.
+                    I want to be yours completely,
+                    To carry your colors in my soul,
+                    To be soaked in your spirit.
+                    I surrender myself to you.
+              </p>
+              <div class="music-controls">
+                <div class="play-button" data-audio="rangrez" data-start-time="228" data-end-time="300">▶</div>
+                <span class="music-title">O Rangrez - </span>
+              </div>
+            </div>
+            
+            <div class="service">
+              <h3 class="service-title">Where Will I Be Without You</h3>
+              <p class="service-description">
+                <span class="quote">
+                    "Hun mennu das mahiya
+                    Tere baaju kidharay nu jaanwan
+                    Ve hun mennu das mahiya
+                    Tere baaju kidharay nu jaanwan"
+                </span>
+                "Tell me, my love —
+Where else can I go without you?
+where else I belong if not to you ?
+Truly, tell me —
+What path remains for me if not the one that leads to you?"
+              </p>
+              <div class="music-controls">
+                <div class="play-button" data-audio="Charkha " data-start-time="285" data-end-time="330">▶</div>
+                <span class="music-title">Charkha </span>
+              </div>
+            </div>
+            
+            <div class="service">
+              <h3 class="service-title">I See Nothing Beyond You.</h3>
+              <p class="service-description">
+                <span class="quote">Meri duniya khatam tere baad sanam
+                    Har apna lagay anjaan</span>
+                   "My world ends after you, Siddhi —
+                   After you, even what was mine feels unfamiliar —
+Every face is strange, every place empty.
+You are my everything… and without you, there's nothing.”
+              </p>
+              <div class="music-controls">
+                <div class="play-button" data-audio="heer" data-start-time="60.7" data-end-time="90">▶</div>
+                <span class="music-title">Heer</span>
+              </div>
+            </div>
+            
+            <div class="service">
+              <h3 class="service-title">We Will Grow Where Love Blooms</h3>
+              <p class="service-description">
+                <span class="quote">"Jidaan rang milde ne odha he aapan mil jaana
+                    Jidaan phull khilde ne odha he donaa khill jaana"</span>
+                "Just as colors blend into one, we will become one.
+                Just as flowers bloom together, our souls will blossom too."
+                
+                
+              <div class="music-controls">
+                <div class="play-button" data-audio="palpal" data-start-time="146" data-end-time="190">▶</div>
+                <span class="music-title">Palpal</span>
+              </div>
+            </div>
+          </div>
+            <!-- Audio elements -->
+            <audio id="rangrez" src="image/128-O Rangrez - Bhaag Milkha Bhaag 128 Kbps.mp3"></audio>
+            <audio id="Charkha " src="image/Charka feat Puran Chand Wadali - Lakhwinder Wadali.mp3"></audio>
+            <audio id="heer" src="image/heer.mp3"></audio>
+            <audio id="palpal" src="image/palpal.mp3"></audio>
+            
+
+
+
+
+          <footer class="footer">
+            <div class="quote">"Whispers of poetry, echoes of love"</div>
+            <div class="beloved-name">Siddhi</div>
+            <div class="made-with-love">
+                Made with 
+                <div class="heart-container">
+                    <span class="heart"></span>
+                    <span class="glow"></span>
+                </div>
+                Love
+            </div>
+        </footer>
+
+
+    
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>

@@ -1,0 +1,660 @@
+    // Get navbar element
+    const navbar = document.getElementById('navbar');
+    const heartIcon = document.getElementById('heartIcon');
+    
+    // Add event listener for scrolling
+    window.addEventListener('scroll', () => {
+      // Show navbar as soon as any scroll is detected
+      if (window.scrollY > 10) {
+        navbar.classList.add('visible');
+      } else {
+        navbar.classList.remove('visible');
+      }
+    });
+    
+    // Get the love message element
+    const loveMessage = document.getElementById('loveMessage');
+    
+    // Create heart particles container
+    const heartParticles = document.createElement('div');
+    heartParticles.className = 'heart-particles';
+    document.body.appendChild(heartParticles);
+    
+    // Toggle heart fill and show love message on click
+    heartIcon.addEventListener('click', () => {
+      // Toggle heart fill
+      heartIcon.classList.toggle('filled');
+      
+      // Play click sound
+      const clickSound = new Audio('data:audio/mp3;base64,SUQzAwAAAAAAJlRQRTEAAAAcAAAAU291bmRKYXkuY29tIFNvdW5kIEVmZmVjdHMA//uSwAAAAAABLBQAAAL6QWlvJMAAFIEYCAhkQA9//8siQ///L5fIEYgahoGgaBgQMC4UJeD8P3/8Mo4OAhwMM/y+X//wwMDBDnGtAgYP/5fL/L//ygIEDBBQgaBoRKEDQNC4UMNY13///oEF9kOQ//+hxNjA9C+XyBIN//+5RAHYGoPHAQMMjJ4PjD4wIMUjKIvDGI6wQJjEguMRDBQwOCr6xDDowKMHjAgwcMCDCY3aEQlIZWGJxggY9GRRisZPGExlEVbNDN1ZZDcQwuMRDYBtGYZDAQwqgVUwxMahcKrXEUSwLKsFZbgGFpg8CGmIpgSYEmw0LGsPJlSYIiItAMgTAkDXMJUmDYsgAaBAVUwDMBzBIGTMHDBcwJMBzAYCdMDjBkEKi0wBAJjA8wXMA5AxBQYYj6VjQYBh0YFhQFAEwFAAwmDSYGSQYNoVAlQYQoU/9MCQdMAgMCAFMAxHCG5gkDBqowxP/LUEzA8CTAoB0MBQxMB0OFRApCBEgYLARMDAKYRMAgAjA5AMBQJkADBiJgwBjoGhYAmAQAGAwBGAICGAgAJQMAkwXAUwIAFeRgCABgUAG5gwAIBRAFgxgE9R//5hmiIVH//yKmOxgcKmO66WdqjutGJi8xaFjFgkYoIRiQWCY2MCChi0SGKQyYlBpiAON+CxfAz/////////5i4GN+Cxf//8xcDjEQOMTggIgIxIJDEYIMRBMxcAP//zDYz//+YbI5iMOGJgoYlCxigHGJwsLgHzCQD///fJ////////+Z2CjK8Z//8jMSgogAa0ADf/7ksBnAB0JBV31jgAL5KLrvrKABoAmAwMmHQnGHQgGDYJmEQTBIpGNATmEgWnGfDnEISmGIRGGwJGIAMmFADF4FzAwHTAgBQRNkHKmAQNGAoNGBwLGCYLgkXDBICzB0CDAsBjAgEzKwVzBcBgYYRIDBIGTnK+TF0XSw2DIwOBEBmqjKYljOYFB8iGJYdhAYIAOYPA+EiGYjAOYAgMYPiQYxjQZOieZ7D0ZFgSYEAYYJAaFAuYFgwYHhOZkKIGVLjGIwNMEwKMAQHCQCmA4BGBYDqg0RDkV5i4YLAaYDACORDQdBKMBWYKAMYMgYY0skJAGYFASZdkWcJkOHwMIgyMAQFMAgEbmGAAMGCoPGAYCGCoGDgDmAACmAIDmAQBGBoAmAABlwYEgCYFAMYFgOBDAwCD5YQJtHzAEATAYADAMARikJF1ZMMTAcATAYATAMAxUAjAIAzAUAxUEpiCjJiMAJgGAIWF8wHAAwCAAKi//N0UDZfXl////////+YhhSYMgOapJyYfiiYQjGnRhMJTlwx5MUy9MxcQ3MOS3M5lrPlDbNSRYNXikMRlcN0AxMCywOCwTGBP//mbqYGVZ3GY6Gf4mlp2mFwGmDIJGC4CG4H///+buggZim2YTnYbXmGaxmQJnGFr//7YcKZNMQDMMgLMggC//M1LX///5j+//+ZhXYY4GgYQBQYJgMYMgYYRhWaTCuYWg4YHACTgIBIMBQVMDwHQ5MCABMAgBDIKwxBOYBAOYAAO/YYBASJQSMBQBMCQGMCQMBQuRDBIBzA8BjAYA/9hYBRgIBoqNhgEBJgSAoGGJgGABgMAwNGUwGAAwEAMwHABAAYDgIYBgEYDAAYCAEXAeYBAEERtMBADVZkBwGGCYAmAwAmAQBGAYBGAoAmAIBGAYAitGGAQAmAQAGAIBDoHmAQBmAoAhQdzAkATAABAsAwDL//+8wDAMEwQRyv///MAgDD4JmAoIL0ZhDH/+5LAoQAhMQ1Z/YQACwEg7L+nq1FVQwAAYwCAEwCAZOJf/5MNTAMAjAMBzAAAjAMAVqXzBABTAQBTAQBGgdMAwDFwJMAQDBkjP//+YDgGYJgIYAACXEUwBP/////////zAIAjAAAzAcAR0//9TEFNRTMuOTkuNaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
+      
+      // Show love message
+      loveMessage.classList.add('active');
+      loveMessage.classList.add('pulse');
+      
+      // Create sparkles around message
+      createSparkles();
+      
+      // Create floating hearts
+      createHeartParticles();
+      
+      // Hide message after 5 seconds (extended time)
+      setTimeout(() => {
+        loveMessage.classList.remove('active');
+        setTimeout(() => {
+          loveMessage.classList.remove('pulse');
+        }, 500);
+      }, 5000);
+    });
+    
+    // Function to create sparkles
+    function createSparkles() {
+      // Clear any existing sparkles
+      const existingSparkles = loveMessage.querySelectorAll('.sparkle');
+      existingSparkles.forEach(sparkle => sparkle.remove());
+      
+      for (let i = 0; i < 25; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        
+        // Random position around message - wider distribution
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 80 + Math.random() * 150;
+        const x = Math.cos(angle) * distance;
+        const y = Math.sin(angle) * distance;
+        
+        sparkle.style.left = `calc(50% + ${x}px)`;
+        sparkle.style.top = `calc(50% + ${y}px)`;
+        
+        // Random size for varied effect
+        const size = 5 + Math.random() * 7;
+        sparkle.style.width = `${size}px`;
+        sparkle.style.height = `${size}px`;
+        
+        // Random colors
+        const colors = ['#fff', '#fffacd', '#ffb6c1', '#ffd700'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        sparkle.style.backgroundColor = randomColor;
+        
+        // Random delay for staggered effect
+        const delay = Math.random() * 1500;
+        setTimeout(() => {
+          sparkle.classList.add('sparkle-animation');
+        }, delay);
+        
+        loveMessage.appendChild(sparkle);
+        
+        // Remove sparkle after animation
+        setTimeout(() => {
+          sparkle.remove();
+        }, delay + 2000);
+      }
+    }
+    
+    // Function to create floating heart particles
+    function createHeartParticles() {
+      // Clear existing heart particles
+      heartParticles.innerHTML = '';
+      
+      // Create new heart particles
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart-particle';
+        
+        // Position hearts to emanate from the center
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const radius = 100;
+        const angle = Math.random() * Math.PI * 2;
+        
+        const x = centerX + Math.cos(angle) * radius;
+        const y = centerY + Math.sin(angle) * radius;
+        
+        heart.style.left = `${x}px`;
+        heart.style.top = `${y}px`;
+        
+        // Random size - make them larger
+        const size = 20 + Math.random() * 25;
+        heart.style.width = `${size}px`;
+        heart.style.height = `${size}px`;
+        
+        // Random colors for variety
+        const colors = ['#ff3366', '#ff0033', '#ff6699', '#ff0066'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        heart.style.backgroundColor = randomColor;
+        
+        // Random rotation
+        const rotation = Math.random() * 360;
+        heart.style.transform = `rotate(${rotation}deg)`;
+        
+        // Random delay for staggered effect
+        const delay = Math.random() * 2000;
+        setTimeout(() => {
+          heartParticles.appendChild(heart);
+        }, delay);
+        
+        // Remove heart after animation
+        setTimeout(() => {
+          heart.remove();
+        }, delay + 4000);
+      }
+    }
+
+
+
+
+    
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Sample poem data with actual word counts calculated
+    const poems = [
+       
+        {
+            id: 1,
+            title: "The Love You Wish To Feel",
+            description: "poet’s gentle plea to Siddhi: not to be loved on his terms, but on hers.",
+            text: `Maya,
+            Tell me Siddhi- How so you wish to be adored?
+            With whishpered words or silence poured?
+            Shall I hold your hand or touch your soul?
+            Teach me to make your wishes whole.
+
+            "They say : To love is to learn,
+                        and to learn is to listen."
+            
+            What is the thrill of fingers entwined,
+            The rush of hearts, the butterflies refined?
+            How does it feel when the moon glows,
+            or the sun dips low and the evening slows?
+
+            If love's a prayer, I'll learn each line,
+            To praise you in a way divine,
+            Your laughter, your tears, I'll hold them all,
+            Teach me to catch you if you ever fall.
+
+            Guide me Siddhi, I will follow through,
+            Each moment a lesson in loving you,
+            With sunsets, stars & skies above,
+            Show me how you wished to be loved.
+
+                        - I love for eternity & more.`
+        },
+        {
+            id: 2,
+            title: "If You Only Knew",
+            description: "Don't ask me how much I Love you !",
+            text: ` If You Only Knew 
+            Siddhi—
+if you could feel
+even a flicker
+of the fire I carry for you,
+
+your knees would forget the ground.
+Your breath—
+a bird caught mid-sky—
+would falter
+beneath the weight
+of everything I’ve never said aloud.
+
+If you could truly know
+how I love you,
+your heart would shatter,
+not from pain,
+but from awe.
+
+You’d collapse
+into the truth
+like rain into the ocean—
+no longer knowing
+where you end
+and where I begin.
+
+The world would halt.
+Clocks would forget how to tick.
+Every song ever written
+would fall silent
+in reverence.
+
+The moon,
+so proud, so distant,
+would scatter its bones across the black
+just to make room
+for your name in the stars.
+
+The sun—
+once a tyrant of light—
+would dim in shame,
+realizing
+it had never truly warmed
+anything the way you warm me
+by simply existing.
+
+Siddhi,
+I do not love you like mortals do.
+I do not love you with skin, or lips, or hands.
+I love you
+with the ache of galaxies,
+with the silence between lightning and thunder,
+with the breath God took
+before saying, “Let there be light.”
+
+If infinity had a heartbeat,
+it would echo mine
+whispering your name.
+Again.
+And again.
+And again.
+
+So don’t ask me
+how deep this love runs—
+ask the stars that died
+so you could be born.
+Ask the rivers
+why they still move
+without ever reaching you.
+Ask the night
+why it weeps
+when it remembers
+you are not mine.
+
+And if you cry—
+know this:
+your tears are prayers
+my soul has already spoken.`
+        },
+        {
+            id: 3,
+            title: "Before The Sky Folds",
+            description: "Even if it is last night before the world ends, I still love you.",
+            text: `Siddhi—
+don’t say a word tonight.
+The stars are listening,
+and they know
+this is the last time
+I’ll ever say your name
+with breath in my lungs.
+
+The world ends at dawn.
+They didn’t tell us,
+but I know.
+I can feel it—
+in the way the moon is holding back tears,
+in how the wind sounds like a goodbye
+no one’s ready to say.
+
+So let me confess
+before the sky folds in on itself—
+I have loved you
+in silence,
+in shadow,
+in every heartbeat that dared not speak.
+
+I have loved you
+while laughing in crowds,
+while pretending you were only
+a passing thought,
+when you were the whole damn storm
+and I stood
+drenched in your name.
+
+I have loved you
+in the spaces between your words,
+in the way you look at the world
+like it never hurt you—
+even when it did.
+
+And if I could choose
+any ending,
+any apocalypse,
+any final breath—
+I would still choose
+this moment,
+this you,
+this truth.
+
+If I could give you anything
+before the sky crumbles,
+it would be this:
+the raw, unfiltered truth
+that you were my everything,
+even when I was nothing to you.
+
+So hold my hand,
+just this once,
+as the stars burn out,
+as time exhales
+and the earth goes still—
+let me die knowing
+you finally knew.`
+        },
+        {
+            id:4 ,
+            title: "Tomorrow With You",
+            description: "The symphony of dreams, how I imagine us.",
+            text: `Let’s finish what we started— Siddhi
+not just our studies,
+not just these quiet days of becoming someone.
+Let’s become us.
+Let’s get the jobs,
+earn enough not for riches,
+but for a life we built with our own hands.
+A small home,
+big enough for dreams,
+small enough to keep us close.
+
+Siddhi- I want to see your parents
+smiling beside mine,
+our families clinking glasses,
+laughing over stories we once only imagined sharing.
+Your hand in mine—
+not just in love,
+but in life.
+
+Let’s wake up together.
+Let the light slip in
+through half-closed curtains
+as we lie tangled in sheets,
+your breath on my chest,
+time paused in the quiet glow of morning.
+
+Let’s cook together—
+your hips brushing mine,
+music in the kitchen,
+laughing over chopped onions
+and burned toast,
+dancing barefoot with sauce-stained spoons.
+
+Let’s sit outside,
+watch sunsets melt into each other,
+every orange sky
+a promise that we stayed.
+That we chose this,
+again and again.
+
+At night,
+we’ll watch the moon rise slow—
+you wrapped in my arms,
+stars scattered like secrets.
+I want every night
+to end with your skin
+pressed against mine,
+your breath heavy and close.
+Let me bury myself in you—
+bite your neck,
+sweat into you,
+lose and find myself
+a hundred times
+until sleep steals us both.
+
+I want your name to echo through our home—
+not just from my lips,
+but from little ones we made.
+I want babies with your eyes,
+your laugh,
+your fire.
+Let’s raise them messy,
+honest,
+free.
+Let’s teach them love
+by the way I’ll never stop looking at you.
+
+Let’s make a life,
+not just a living.
+Let’s carve a way out of this chaos—
+just you and me,
+building something
+the world can’t touch.
+
+And when the last light comes—
+when our hands are older,
+our breaths slower—
+let’s sit together,
+one final sunset,
+your fingers in mine,
+our whole story behind us,
+and nothing left to say
+but I Love You, today, tomorrow & forever.
+
+`
+        },
+        {
+            id: 6,
+            title: "In This One Life",
+            description: "Siddhi- even if I had hundreds of Life's , I would always choose this one for YOOU !",
+            text: `A hundred lifetimes
+wouldn’t be enough—
+but I would still choose this one,
+the one where I found you
+in a world that almost convinced me
+I never would.
+
+I wasn’t waiting for perfect.
+I was waiting for real.
+For the kind of love
+that doesn’t knock loud—
+just opens the door
+and says, “I’m home.”
+
+You are not a chapter—
+you are the book.
+You are not a spark—
+you are the fire that stayed lit
+when every candle I held
+burned out too soon.
+
+Before you,
+I knew the shape of loneliness
+better than my own skin.
+I knew silence that echoed,
+nights that stretched empty,
+hands that reached
+but never landed.
+
+But then—
+you.
+Not loud, not lightning.
+You, like rain after drought.
+You, like breath after drowning.
+
+They say you only find
+a love like this once—
+and they’re right.
+This is it.
+The kind of love
+that doesn’t ask to be written about,
+but still ends up in every line.
+
+If I only get one life,
+let it be this one.
+Let it be the one
+where I found you
+and finally stopped searching.`
+        }
+    ];
+
+    // Calculate word counts for each poem
+    poems.forEach(poem => {
+        poem.wordCount = countWords(poem.text);
+    });
+
+    // DOM Elements
+    const viewAllButton = document.getElementById('view-all-button');
+    const morePoems = document.querySelector('.more-poems');
+    const poemDetails = document.getElementById('poem-details');
+    const closeButton = document.querySelector('.close-button');
+    const detailTitle = document.getElementById('detail-title');
+    const detailPoem = document.getElementById('detail-poem');
+    const detailWordcount = document.getElementById('detail-wordcount');
+
+    // Event Listeners
+    viewAllButton.addEventListener('click', toggleMorePoems);
+    closeButton.addEventListener('click', closePoem);
+
+    // Initialize poem items with click listeners
+    initializePoemItems();
+    
+    // Function to count words in a text
+    function countWords(text) {
+        // Remove extra whitespace and split by spaces
+        return text.trim().split(/\s+/).length;
+    }
+    
+    function initializePoemItems() {
+        // Select all poem items
+        const allPoemItems = document.querySelectorAll('.poem-item');
+        
+        allPoemItems.forEach(item => {
+            // Get the poem number from the item's text content
+            const poemNumberText = item.querySelector('.poem-number').textContent;
+            // Extract the number from "(01)" format
+            const poemId = parseInt(poemNumberText.replace(/[()]/g, ''));
+            
+            // Update word count with calculated values
+            const wordCountElement = item.querySelector('.poem-wordcount');
+            const poem = poems.find(p => p.id === poemId);
+            if (poem) {
+                wordCountElement.textContent = `${poem.wordCount} words`;
+            }
+            
+            // Add click event listener
+            item.addEventListener('click', () => {
+                showPoemDetails(poemId);
+            });
+        });
+    }
+
+    // Toggle more poems visibility
+    function toggleMorePoems() {
+        if (morePoems.style.display === 'none' || !morePoems.style.display) {
+            morePoems.style.display = 'block';
+            viewAllButton.textContent = 'Hide Additional Poems';
+        } else {
+            morePoems.style.display = 'none';
+            viewAllButton.textContent = 'View More Poems';
+        }
+    }
+
+    // Show poem details
+    function showPoemDetails(poemId) {
+        const poem = poems.find(p => p.id === poemId);
+        
+        if (poem) {
+            detailTitle.textContent = poem.title;
+            detailPoem.textContent = poem.text;
+            detailWordcount.textContent = `Word count: ${poem.wordCount}`;
+            
+            // Add active class to show the overlay
+            poemDetails.classList.add('active');
+            
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Close poem details
+    function closePoem() {
+        poemDetails.classList.remove('active');
+        
+        // Allow body scrolling again
+        document.body.style.overflow = '';
+    }
+
+    // Close modal if clicking outside the content
+    poemDetails.addEventListener('click', function(e) {
+        if (e.target === poemDetails) {
+            closePoem();
+        }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && poemDetails.classList.contains('active')) {
+            closePoem();
+        }
+    });
+});
+
+
+
+
+
+
+
+
+// Modified JavaScript for your specific HTML structure
+document.addEventListener('DOMContentLoaded', function() {
+  const playButtons = document.querySelectorAll('.play-button');
+  const audioElements = document.querySelectorAll('audio');
+  
+  playButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const audioId = this.getAttribute('data-audio');
+      const audioElement = document.getElementById(audioId);
+      
+      if (!audioElement) {
+        console.error('Audio element not found:', audioId);
+        return;
+      }
+      
+      // Get start and end times (in seconds) from data attributes
+      const startTime = parseFloat(this.getAttribute('data-start-time') || 0);
+      const endTime = this.getAttribute('data-end-time') ? 
+                      parseFloat(this.getAttribute('data-end-time')) : 
+                      audioElement.duration;
+      
+      console.log(`Playing ${audioId} from ${startTime}s to ${endTime}s`);
+      
+      // Stop all other audio
+      audioElements.forEach(audio => {
+        if (audio.id !== audioId) {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      });
+      
+      // Reset all play buttons
+      playButtons.forEach(btn => {
+        if (btn !== this) {
+          btn.innerHTML = '▶';
+          btn.classList.remove('playing');
+        }
+      });
+      
+      // Toggle play/pause for this audio
+      if (audioElement.paused) {
+        // Set the current time to the desired start time
+        audioElement.currentTime = startTime;
+        
+        // Clear any existing timeupdate listeners to prevent duplicates
+        audioElement.onended = null;
+        audioElement.ontimeupdate = null;
+        
+        // Add an event listener to stop playback when reaching the end time
+        audioElement.ontimeupdate = function() {
+          if (audioElement.currentTime >= endTime) {
+            audioElement.pause();
+            audioElement.ontimeupdate = null;
+            button.innerHTML = '▶';
+            button.classList.remove('playing');
+          }
+        };
+        
+        // Start playback
+        audioElement.play().catch(error => {
+          console.error('Playback failed:', error);
+        });
+        
+        this.innerHTML = '⏸';
+        this.classList.add('playing');
+      } else {
+        // Pause playback
+        audioElement.pause();
+        this.innerHTML = '▶';
+        this.classList.remove('playing');
+        
+        // Remove listeners
+        audioElement.ontimeupdate = null;
+      }
+    });
+  });
+});
