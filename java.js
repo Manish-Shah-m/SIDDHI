@@ -469,6 +469,251 @@ let it be this one.
 Let it be the one
 where I found you
 and finally stopped searching.`
+        },
+         {
+            id: 6,
+            title: "I Love You Raw",
+            description: "Siddhi- I confession of love that embraces every imperfection without hesitation. I love you as - you are.",
+            text: `Siddhi-
+            Give me your anger, your shame—
+the heat in your chest when the world doesn't listen,
+the words you swallow just to keep peace,
+the tears you hide in a smile that fools everyone but me.
+
+Give me the version of you
+that stares too long at the mirror,
+counting flaws like sins.
+Let me kiss each one like a blessing.
+
+Bring me the cracked voice at midnight,
+the silence when words feel false.
+I want the trembling hands, the half-healed scars,
+the edge of your voice when you say you’re fine—
+but you’re not.
+
+Bring me your sleepless nights,
+your aching back from carrying too much,
+the story of the scar on your body,
+the one you got when you ran too fast trying to be free.
+Let me hear how it hurt.
+Let me stay when it still does.
+
+Let me into the room where you hide your chaos,
+where your journals are messier than your thoughts,
+where old dreams collect dust,
+and fears live in drawers you never open.
+I'll sit with you there.
+
+Show me the texts you never sent,
+the apologies you whispered to no one,
+the love you gave that was never returned.
+I’ll hold your shaking voice,
+and I won’t ask it to sing.
+
+I don’t need the filtered version—
+the rehearsed smiles, the flawless days.
+I want the you that curses in traffic,
+wears socks that don’t match,
+laughs like thunder when you forget how to care.
+
+Give me the mornings when you don’t feel like rising,
+the nights when you're more shadow than skin.
+I’ll love the you that doubts,
+the you that fights back tears with silence,
+the you that believes you are too much or not enough.
+
+Siddhi- I Love You !
+Not for the shine,
+not for the mask you wear for the world—
+but for the raw,
+the honest,
+the storm that you are.
+
+You don’t need to be soft to be worthy.
+You don’t need to be easy to be held.
+Just come undone,
+and I’ll still say:
+I'll love you:
+this,
+all of this,
+is beautiful.
+I will love you with every scar,
+ever imperfection, all that you are-
+all you have, all I see is:
+just magic & beauty.
+
+You are neither.
+You are exactly as I want you:
+unfiltered,
+unmended,
+real.
+
+Let your edges stay sharp,
+your wounds stay healing.
+Don’t cover them up.
+I’ll trace every line like a map
+leading to the truth of you.
+
+I won’t love you despite your cracks—
+I’ll love you through them,
+within them,
+because of them.
+
+So break,
+bleed,
+breathe.
+You don’t have to become anything else.
+I love you, not when you’re perfect—
+but precisely when you’re not.`
+        },
+
+        {
+            id:7,
+            title: "You, the Religion I Chose",
+            description: "Siddhi— I am what remains when obsession loses shame, consuming madness and devotion turns to beautiful disease.",
+            text: `Siddhi,
+like barren earth opens their veins for rain,
+I open myself for you—
+not in body,
+but in the aching parts words cannot touch.
+
+You —
+you are not a girl to me,
+you are a God.
+I do not love you,
+I worship you.
+Every breath I take is a prayer
+where your name is the only verse.
+
+Let your soul drip into mine,
+slow,
+like honey over open wounds.
+Let us blur,
+dissolve,
+fold into each other
+until even God cannot tell
+where I end
+and you begin.
+
+Color me with your storms.
+Paint your sorrow into my silence,
+your fire into my cold.
+Stain me with your every shade —
+I want no skin of my own.
+I want yours.
+
+Don’t let me touch you.
+Let me become you.
+Let my bones carry the map of your breath,
+let my blood echo your heartbeat
+like thunder missing lightning.
+
+Let me live beneath your skin,
+beneath your fears,
+in the hollow of your nights
+where no one else dares to look.
+
+I want to kiss your scars,
+not as pity,
+but as proof—
+that even your wounds
+are divine.
+
+Give me your pain.
+Give me the broken.
+I want it all.
+All your chaos.
+All your quiet.
+The angry red in your voice
+when no one listens.
+The soft you hide
+because it trembles too loud.
+
+Mark me, Siddhi.
+Not with ink,
+but with your teeth,
+your whispers,
+your presence heavy
+on my neck,
+like chains I beg to wear.
+
+I want to rot inside your forever.
+Decay into your memory
+like forgotten flowers
+in pages of old love letters.
+
+You are not mine.
+I am yours.
+I am what happens
+when obsession forgets shame,
+and devotion becomes disease.
+
+So hold me—
+not with hands,
+but with your absence.
+Haunt me.
+Haunt every breath I steal
+in your name.
+
+And when this life fades,
+when time gives up on us,
+let our dust
+still cling together
+in wind,
+in shadow,
+in everything
+that aches beautifully.
+
+Let me whisper inside you: "You are mine , You are all mine."
+
+And when death comes,
+let it not find us two,
+but one — soaked, merged, holy.`
+
+
+        },
+         {
+            id: 8,
+            title: "No Rehab for This",
+            description: "I confess of a love so consuming, it replaces every vice and becomes the sweetest, most devastating addiction.",
+            text: `I never needed needles, never kissed a glassy flame—
+But God, when she looked at me, I never was the same.
+Her pupils pull like gravity, black holes dressed in light,
+Each glance a hit that wrecks me more than any sleepless night.
+
+Her scent—it's not perfume, it’s prophecy and prayer,
+A whisper of her passing haunts the very air.
+No rose, no smoke, no rain-soaked earth compares,
+To how her skin smells like sin, wrapped in silent stares.
+
+I used to chase escape in things I can't recall—
+Cheap highs, loud nights, the nothingness of it all.
+Now I chase the hush of her breath in the dawn,
+A sigh, a laugh, and suddenly the world is gone.
+
+The tilt of her smile is a shot to the vein,
+The kind that sings and stings and numbs the pain.
+Her voice—each word she speaks—a hymn, a drug, a chain,
+It frees me just enough to crave the cage again.
+
+I fold her name into my day like some old creed—
+Brush teeth, say prayers, pretend I don’t need.
+But I do. I need. God, I do.
+I’d trade every vice I’ve ever known just to drown in her truth.
+
+And yet I see it now—this isn't love, it's thirst.
+A beautiful undoing in its softest, sweetest curse.
+I don’t know if she’s heaven or hell in disguise—
+Only that I’m gone, and she’s the reason why.
+
+So let them keep their poisons, their bottles, their blades—
+I’ll take the slow decay of the way her gaze invades.
+I’m addicted, yes, and I make no disguise—
+Not to smoke or pills—
+But to her.
+To her scent.
+To her presence.
+To the ruin in her eyes.`
         }
     ];
 
@@ -658,3 +903,83 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+
+
+
+//additional music
+ document.addEventListener('DOMContentLoaded', function() {
+      // Listen More Button Functionality
+      const listenMoreBtn = document.querySelector('.listen-more-btn');
+      const additionalContent = document.querySelector('.additional-content');
+      
+      if (listenMoreBtn && additionalContent) {
+        listenMoreBtn.addEventListener('click', function() {
+          additionalContent.classList.toggle('active');
+          this.classList.toggle('active');
+          
+          // Change button text based on state
+          if (this.classList.contains('active')) {
+            this.innerHTML = 'Show Less <span class="icon"></span>';
+          } else {
+            this.innerHTML = 'Listen More <span class="icon"></span>';
+          }
+        });
+      }
+      
+      // Audio Player Functionality
+      const playButtons = document.querySelectorAll('.play-button');
+      let currentlyPlaying = null;
+      
+      playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const audioId = this.getAttribute('data-audio');
+          const startTime = parseFloat(this.getAttribute('data-start-time'));
+          const endTime = parseFloat(this.getAttribute('data-end-time'));
+          const audio = document.getElementById(audioId);
+          
+          if (!audio) return; // Guard against missing audio elements
+          
+          // Stop currently playing audio if exists
+          if (currentlyPlaying) {
+            const currentAudio = document.getElementById(currentlyPlaying.audioId);
+            if (currentAudio) {
+              currentAudio.pause();
+              currentAudio.currentTime = 0;
+              currentlyPlaying.button.innerHTML = '▶';
+              currentlyPlaying.button.classList.remove('playing');
+            }
+          }
+          
+          // Play new audio or stop if same button clicked
+          if (currentlyPlaying && currentlyPlaying.button === this) {
+            currentlyPlaying = null;
+          } else {
+            audio.currentTime = startTime;
+            audio.play();
+            this.innerHTML = '■';
+            this.classList.add('playing');
+            
+            currentlyPlaying = {
+              audioId: audioId,
+              button: this
+            };
+            
+            // Set end time listener
+            const timeUpdateHandler = function() {
+              if (audio.currentTime >= endTime) {
+                audio.pause();
+                audio.currentTime = startTime;
+                button.innerHTML = '▶';
+                button.classList.remove('playing');
+                currentlyPlaying = null;
+                audio.removeEventListener('timeupdate', timeUpdateHandler);
+              }
+            };
+            
+            audio.addEventListener('timeupdate', timeUpdateHandler);
+          }
+        });
+      });
+    });

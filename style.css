@@ -712,25 +712,6 @@ body {
   margin: 2rem 0;
 }
 
-#view-all-button {
-  background-color: var(--accent-purple);
-  color: var(--light-text);
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-family: var(--font-secondary);
-  font-size: 1rem;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 200px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-#view-all-button:hover {
-  background-color: var(--accent-red);
-  transform: translateY(-2px);
-}
-
 .poems-container {
   display: flex;
   flex-direction: column;
@@ -899,6 +880,182 @@ body {
   transform: rotate(90deg);
 }
 
+/* Medium screens */
+@media screen and (max-width: 992px) {
+  .container2 {
+    padding: 1.5rem 4%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .poem-item {
+    grid-template-columns: 60px 2fr 3fr 1fr;
+    padding: 1.2rem 0;
+  }
+  .poem-title {
+    font-size: 1.3rem !important;
+  }
+  .poem-description {
+    font-size: 0.9rem !important;
+  }
+  .poem-details-content {
+    padding: 2rem;
+    width: 95%;
+  }
+  .poem-details-content h2 {
+    font-size: 2rem;
+  }
+}
+/* Small screens (tablets) */
+@media screen and (max-width: 768px) {
+  .container2 {
+    padding: 1.2rem 3%;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .poem-item {
+    grid-template-columns: 50px 1fr 2fr 80px;
+    padding: 1rem 0;
+  }
+  .poem-title {
+    font-size: 1.2rem !important;
+  }
+  .poem-description {
+    font-size: 0.85rem !important;
+    padding-right: 1rem;
+  }
+  .poem-wordcount {
+    font-size: 0.8rem;
+  }
+  .poem-details-content {
+    padding: 1.8rem;
+  }
+  .poem-details-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .poem-text {
+    font-size: 1rem !important;
+    line-height: 1.7;
+    margin: 1.5rem 0;
+  }
+}
+/* Extra small screens (mobile phones) */
+@media screen and (max-width: 576px) {
+  .container2 {
+    padding: 1rem 2%;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  /* Reorganize poem item grid for mobile */
+  .poem-item {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "number title wordcount" "empty description description";
+    padding: 0.8rem 0;
+    gap: 0.5rem 0.8rem;
+  }
+  .poem-item .poem-number {
+    grid-area: number;
+    font-size: 0.9rem;
+  }
+  .poem-item .poem-title {
+    grid-area: title;
+    font-size: 1.1rem !important;
+  }
+  .poem-item .poem-description {
+    grid-area: description;
+    font-size: 0.8rem !important;
+    grid-column: 1/-1;
+    padding-right: 0;
+    padding-left: 40px;
+  }
+  .poem-item .poem-wordcount {
+    grid-area: wordcount;
+    font-size: 0.75rem;
+    justify-self: end;
+  }
+  #view-all-button {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.9rem;
+    min-width: 180px;
+  }
+  .button-container {
+    margin: 1.5rem 0;
+  }
+  /* Overlay adjustments for mobile */
+  .poem-details-content {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 0;
+  }
+  .poem-details-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .poem-details-content h2:after {
+    width: 40px;
+    height: 2px;
+    bottom: -8px;
+  }
+  .poem-text {
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+    margin: 1.2rem 0;
+  }
+  .close-button {
+    top: 0.7rem;
+    right: 1rem;
+    font-size: 1.7rem;
+    width: 35px;
+    height: 35px;
+  }
+  .detail-meta {
+    font-size: 0.8rem;
+  }
+}
+/* Very small screens */
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+  .poem-item {
+    grid-template-columns: 30px 1fr;
+    margin-top: 10px;
+  }
+  .poem-item .poem-title {
+    font-size: 1rem !important;
+  }
+  .poem-item .poem-description {
+    font-size: 0.75rem !important;
+    padding-left: 30px;
+  }
+  .poem-details-content {
+    padding: 1.3rem;
+  }
+  .poem-details-content h2 {
+    font-size: 1.4rem;
+  }
+  .poem-text {
+    font-size: 1rem !important;
+  }
+  #view-all-button {
+    min-width: 160px;
+    font-size: 0.85rem;
+  }
+}
 /* Hero Section */
 .hero-container2 {
   display: flex;
@@ -987,7 +1144,7 @@ h1 {
     transform: translateY(-5px);
   }
 }
-/* Content Section */
+/* Section Header */
 .section-header {
   font-size: 24px;
   margin-bottom: 40px;
@@ -1002,6 +1159,7 @@ h1 {
   color: var(--accent-red);
 }
 
+/* Services Grid */
 .services {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1125,54 +1283,76 @@ h1 {
   font-weight: 500;
 }
 
-.social-links {
+/* Listen More Button */
+.listen-more-container {
+  text-align: center;
+  margin: 40px 0;
   display: flex;
-  gap: 15px;
-  margin-top: 60px;
   justify-content: center;
 }
 
-.social-link {
-  width: 45px;
-  height: 45px;
+.listen-more-btn {
+  font-family: inherit;
+  display: inline-block;
+  width: 11em;
+  height: 2.9em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--accent-red);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  background-color: none;
+  font-weight: 500;
+}
+
+.listen-more-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--accent-red);
+  height: 150px;
+  width: 200px;
   border-radius: 50%;
-  background-color: var(--accent-purple);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--light-text);
-  transition: all 0.3s ease;
-  font-size: 20px;
 }
 
-.social-link:hover {
-  background-color: var(--accent-red);
-  transform: translateY(-5px);
+.listen-more-btn:hover {
+  color: #fff;
+}
+
+.listen-more-btn:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.listen-more-btn:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.listen-more-btn:active:before {
+  background: var(--dark-bg);
+  transition: background 0s;
+}
+
+/* Additional Content */
+.additional-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.additional-content.active {
+  max-height: 2000px; /* Adjust as needed */
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
-  .hero-image2 {
-    width: 90%;
-  }
-  .hero-description2 {
-    width: 90%;
-  }
-}
 @media screen and (max-width: 768px) {
-  .container {
-    width: 95%;
-    padding: 30px 0;
-  }
-  .hero-container2 {
-    padding: 30px 0;
-  }
-  .hero-image2 {
-    width: 100%;
-  }
-  .hero-description2 {
-    width: 100%;
-  }
   .services {
     grid-template-columns: 1fr;
   }
@@ -1183,19 +1363,7 @@ h1 {
 }
 @media screen and (max-width: 480px) {
   .container {
-    padding: 20px 0;
-  }
-  .hero-container2 {
-    padding: 20px 0;
-  }
-  .hero-text2 {
-    margin-bottom: 20px;
-  }
-  .hero-description2 {
-    margin-top: 20px;
-  }
-  .scroll-prompt {
-    margin-top: 25px;
+    padding: 20px 10px;
   }
   .service {
     padding: 20px 12px;
@@ -1207,29 +1375,9 @@ h1 {
     padding-left: 10px;
     margin-bottom: 12px;
   }
-}
-/* Touch Device Optimizations */
-@media (hover: none) {
-  .service:hover::before {
-    transform: scaleX(1);
-  }
-  .service:hover {
-    background: rgba(82, 42, 111, 0.1);
-  }
-  .service:hover .service-description {
-    color: var(--light-text);
-  }
-  .service:hover .quote {
-    border-left-width: 4px;
-    background: rgba(156, 30, 16, 0.1);
-    padding: 8px 12px;
-  }
-  .service:hover .music-title {
-    color: var(--light-text);
-  }
-  .play-button:active {
-    background-color: var(--accent-red);
-    transform: scale(1.1);
+  .listen-more-btn {
+    padding: 12px 30px;
+    font-size: 16px;
   }
 }
 .footer {
@@ -1346,4 +1494,53 @@ h1 {
   width: 50%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, var(--accent-warm) 50%, transparent 100%);
+}
+
+button, #view-all-button {
+  font-family: inherit;
+  display: inline-block;
+  width: 11em;
+  height: 2.9em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--accent-red);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  background-color: none;
+  font-weight: 500;
+}
+
+button, #view-all-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--accent-red);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+button, #view-all-button:hover {
+  color: #fff;
+}
+
+button, #view-all-button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+button, #view-all-button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+button, #view-all-button:active:before {
+  background: var(--dark-bg);
+  transition: background 0s;
 }/*# sourceMappingURL=style.css.map */
